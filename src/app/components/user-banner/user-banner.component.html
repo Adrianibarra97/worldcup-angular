@@ -1,0 +1,12 @@
+<aside class = "banner">
+    <div class = "banner__items">
+        <figure class = "banner__item banner__item--image">
+            <img class = "banner__item--profile" [src] = "user?.url" alt = "user">
+        </figure>
+        <p data-testid = "name" class = "banner__item banner__item--title">
+            <span class = "banner__item--font">{{ user?.username }} <i class = "fa-solid fa-pencil"></i></span>
+        </p>
+        <p data-testid = "age" class = "banner__item"><span class = "banner__item--font">Edad: </span>{{ edad() }} años</p>
+        <p data-testid = "ubication" class = "banner__item"><span class = "banner__item--font">Ubicación: </span>{{ user?.address?.location }}</p>
+    </div>
+</aside>

@@ -1,0 +1,85 @@
+<div class = "bigfigurine">
+    <div class = "bigfigurine__content">
+        <div class = "bigfigurine__content--header">
+            <div class = "content--title">
+                <p class = "content__item"><span>{{ figurine.player.name }} {{ figurine.player.surname }}</span></p>
+                <p class = "content__item">(de {{ figurine.giveBy?.nombre }} {{ figurine.giveBy?.apellido }})</p>
+            </div>
+            <div class = "content__item--icons">
+                <i class = "fa-solid fa-fire-flame-curved content__item content__item--color"></i>
+                <i class = "fa-solid fa-clipboard-user content__item"></i>
+                <p class = "content__item"><span>{{ figurine.numberFigurine }}</span></p>
+            </div>
+        </div>
+        <div class = "bigfigurine__content--information">     
+            <figure class = "content__image">
+                <img class = "content__image--size" alt = "photo-figurine" [src] = "figurine.url">
+            </figure>
+            <div class = "content__detail">
+                <div class = "content__detail--start">
+                    <p class = "content__attribute">
+                        <i class = "fa-solid fa-weight-scale"></i>
+                        <span>Peso</span>{{ figurine.player.weight }} Kilos
+                    </p>
+                    <p class = "content__attribute">
+                        <i class = "fa-solid fa-person-arrow-up-from-line"></i>
+                        <span>Altura</span>{{ figurine.player.height }} mts
+                    </p>
+                </div>
+                <div class = "content__detail--center">
+                    <p class = "content__attribute">
+                        <span>Nacimiento</span>{{ figurine.player.birthOfDate.getDate() }}/{{ figurine.player.birthOfDate.getMonth() }}/{{ figurine.player.birthOfDate.getFullYear() }} ({{ figurine.edad() }} años)
+                    </p>
+                </div>
+                <div class = "content__detail--start">
+                    <p class = "content__attribute">
+                        <span>Casaca</span>{{ figurine.player.numberTShirt }}
+                    </p>
+                    <p class = "content__attribute">
+                        <span>Selección</span>{{ figurine.player.nationalTeam.country }} (<i class = "fa-solid fa-trophy"></i>{{ figurine.player.nationalTeam.worldCups }})
+                    </p>
+                </div>
+                <div class = "content__detail--start">
+                    <p class = "content__attribute">
+                        <span>Año debut</span>{{ figurine.player.yearDebut }}
+                    </p>
+                    <p class = "content__attribute">
+                        {{ figurine.player.nationalTeam.confederationName }} (<i class = "fa-solid fa-trophy"></i>10)
+                    </p>
+                </div>
+                <div class = "content__detail--start">
+                    <p class = "content__attribute">
+                        <span>Posición</span>{{ figurine.player.position }}
+                    </p>
+                    <div *ngIf="figurine?.player?.isLeader">
+                        <p class = "content__attribute">
+                            <span>Es lider</span>
+                        </p>
+                    </div>
+                </div>
+                <div class = "content__detail--center">
+                    <p class = "content__attribute">
+                        <span class = "content--font">Cotización USD {{ figurine.player.price }}</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class = "content__detail--start">
+                <p class = "content__attribute"><span>Nivel de impresión</span>{{ figurine.impressionLevel }}</p>
+                <p class = "content__attribute"><span>Valoración Base</span>{{ figurine.valoracionBase() }}</p>
+            </div>
+            <div class = "content__detail--center">
+                <p class = "content__attribute"><span class = "content--font">Valoración Total</span>{{ figurine.player.valoracion }}</p>
+            </div>
+            <div class = "content__item--buttons">
+                <button data-testid="big-figurine-volver" class = "content__button content__button--reset" [routerLink]="'/home'">Volver</button>
+                <button
+                    [ngClass] = "{'content__button content__button--save content__button--disable':hasFigurineRepeated,'content__button content__button--save':!hasFigurineRepeated}"
+                    (click)="requestHandler()"
+                    [disabled] = "hasFigurineRepeated"
+                >Solicitar</button>
+            </div>
+        </div>
+    </div>
+</div>

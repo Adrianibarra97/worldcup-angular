@@ -1,0 +1,8 @@
+<app-browser (searchByTitle) = "this.searchByTitle($event)"></app-browser>
+<div class = "body--distribution">
+    <app-envelopes-filter [ngClass] = "'aside'" (filterPointOfSale) = "filterPointOfSale($event)"></app-envelopes-filter>
+    <app-grid
+        [ngClass] = "'grid'"
+        [content] = "this.pointOfSales"
+    ></app-grid>
+</div>

@@ -1,0 +1,18 @@
+<header class = "header">
+    <div id = "menu" class = "menu">
+        <div class = "menu__items">
+            <div class = "menu__item--title">
+                <p data-testid = "title" class = "menu__item--position">WorldCApp</p>
+            </div>
+            <button class = "fa-solid fa-bars menu__item--button" (click) = "menuAction()"></button>
+        </div>
+        <nav class = "nav">
+            <ul class = "nav__items">  
+                <li class = "nav__item"><a data-testid = "option-figurines" routerLink = "/home">Figuritas</a></li>  
+                <li class = "nav__item"><a data-testid = "option-envelopes" routerLink = "/search-envelopes">Sobres</a> </li>
+                <li class = "nav__item"><a data-testid = "option-profile" routerLink = "/profile/information">Perfil</a></li>
+                <li class = "nav__item"><button data-testid = "button-logout" class = "fa-solid fa-right-from-bracket nav__item nav__button--logout" (click) = "this.logout()"></button></li>
+            </ul>
+        </nav>
+    </div>
+</header>

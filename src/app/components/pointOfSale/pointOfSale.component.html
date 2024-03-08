@@ -1,0 +1,28 @@
+<div class = "figurine figurine--pointOfSale">
+    <div class = "pointOfSale__title">
+        <p>{{ pointOfSale.name }}</p>
+        <i [ngClass] = "pointOfSale.icon"></i>
+    </div>
+    <div class = "pointOfSale__information">
+        <div class = "pointOfSale__information--general pointOfSale__information--position1 pointOfSale__information--border">
+            <p><span>Dirección:</span>
+                {{ pointOfSale.locationPointOfSale.street }} 
+                {{ pointOfSale.locationPointOfSale.streetHeight }},
+                {{ pointOfSale.locationPointOfSale.location }},
+                {{ pointOfSale.locationPointOfSale.province }}
+            </p>
+            <p><span>Ubicación geográfica:</span>
+                ({{ pointOfSale.locationPointOfSale.geographicLocationX }},
+                {{ pointOfSale.locationPointOfSale.geographicLocationY }})
+            </p>
+            <p><span>Distancia:</span> {{ pointOfSale.distancia | number: "2.2" }} km</p>
+        </div>
+        <div class = "pointOfSale__information--general pointOfSale__information--position2 pointOfSale__information--border">
+            <p data-testid = "stockEnvelopes"><span>Stock de Sobres:</span> {{ pointOfSale.stockEnvelopes }}</p>
+            <p data-testid = "amountOrders"><span>Pedidos Pendientes:</span> {{ pointOfSale.pedidosPendientes }} unidades </p>
+        </div>
+        <div class = "pointOfSale__information--general pointOfSale__information--position3">
+            <p data-testid = "priceEnvelopes"><span>Precio por sobre ${{ pointOfSale.precioPorSobre }}</span></p>
+        </div>  
+    </div>
+</div>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>WorldCupApp</title>
+    <link rel = "stylesheet" href = "../css/templates-styles/main.css">
+    <link rel = "stylesheet" href = "../css/components-styles/header.css">
+    <link rel = "stylesheet" href = "../css/components-styles/userBanner.css">
+    <link rel = "stylesheet" href = "../css/components-styles/userInfoNav.css">
+    <link rel = "stylesheet" href = "../css/components-styles/userInfoForm.css">
+    <link rel = "stylesheet" href = "../css/components-styles/footer.css">
+    <link rel = "preconnect" href = "https://fonts.googleapis.com">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
+    <script src = "https://kit.fontawesome.com/3251cdb940.js" crossorigin = "anonymous"></script>
+    <script src = "../scripts-js/menu-action.js" crossorigin = "anonymous"></script>
+</head>
+<body class = "scroll--style">
+    <header class = "header">
+        <div id = "menu" class = "menu">
+            <div class = "menu__items">
+                <div class = "menu__item--title">
+                    <p class = "menu__item--position">WorldCApp</p>
+                </div>
+                <button class = "fa-solid fa-bars menu__item--button" onclick = "menuAction()"></button>
+            </div>
+            <nav class = "nav">
+                <ul class = "nav__items">  
+                    <li class = "nav__item"><a href = "../templates/searchFigurines.html">Figuritas</a></li>  
+                    <li class = "nav__item"><a href = "../templates/searchEnvelopes.html">Sobres</a> </li>
+                    <li class = "nav__item"><a href = "../templates/profileInformation.html">Perfil</a></li>
+                    <li class = "nav__item"><button class = "fa-solid fa-right-from-bracket nav__item nav__button--logout"></button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class = "main">
+        <div class = "body--distribution">
+            <aside class = "banner">
+                <div class = "banner__items">
+                    <figure class = "banner__item banner__item--image">
+                        <img class = "banner__item--profile" src = "../images/carlitos.jpg" alt = "user">
+                    </figure>
+                    <p class = "banner__item banner__item--title"><span class = "banner__item--font">carlitos 123 <i class = "fa-solid fa-pencil"></i></span></p>
+                    <p class = "banner__item"><span class = "banner__item--font">Edad:</span> 84 años</p>
+                    <p class = "banner__item"><span class = "banner__item--font">Ubicación:</span> CABA</p>
+                </div>
+            </aside>
+            <div class = "section--distribution">
+                <nav class = "user__nav">
+                    <ul class = "nav__user--items">  
+                        <li class = "nav__user--item nav__user--border"><a href = "../templates/profileInformation.html">Información del perfil</a></li>  
+                        <li class = "nav__user--item"><a href = "../templates/repeatedFigurines.html">Figuritas Repetidas</a></li>
+                        <li class = "nav__user--item"><a href = "../templates/missingFigurines.html">Figuritas Faltantes</a></li>
+                    </ul>
+                </nav>
+                <form class = "form" action = "POST">
+                    <div class = "form__items">
+                        <p class = "form__item--title">Información general</p>
+                        <div class = "form__item--content">
+                            <div class = "user">
+                                <label class = "user__item--label">Nombre</label>
+                                <input class = "user__item--information" type = "text" placeholder = "Nombre:">
+                                <label class = "user__item--label">Apellido</label>
+                                <input class = "user__item--information" type = "text" placeholder = "Apellido:">
+                            </div>
+                            <div class = "user">
+                                <label class = "user__item--label">Correo electrónico</label>
+                                <input class = "user__item--information" type = "email" placeholder = "Correo electrónico:">
+                                <label class = "user__item--label">Fecha de nacimiento</label>
+                                <input class = "user__item--information" type = "date" placeholder = "Fecha de nacimiento:">
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "form__items">
+                        <p class = "form__item--title">Dirección</p>
+                        <div class = "form__item--content">
+                            <div class = "user">
+                                <label class = "user__item--label">Provincia</label>
+                                <select name = "provincia" class = "user__item--information">
+                                    <option value = "1">Seleccione una opción</option>
+                                    <option value = "2">Buenos Aires</option>
+                                    <option value = "3">Catamarca</option>
+                                </select>
+                                <label class = "user__item--label">Calle</label>
+                                <input class = "user__item--information" type = "text" placeholder = "Calle:">
+                            </div>
+                            <div class = "user">
+                                <label class = "user__item--label">Localidad</label>
+                                <select name = "loccalidad" class = "user__item--information">
+                                    <option value = "1">Seleccione una opción</option>
+                                    <option value = "2">San Andrés</option>
+                                    <option value = "3">CABA</option>
+                                </select>
+                                <label class = "user__item--label">Altura</label>
+                                <input class = "user__item--information" type = "number" placeholder = "Altura:">
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "form__items">
+                        <p class = "form__item--title">Ubicación geográfica</p>
+                        <div class = "form__item--content form__item--invert">
+                            <div class = "user user__item--invert">
+                                <div class = "item__invert">
+                                    <label class = "item__invert--label">Posición X</label>
+                                    <input class = "user__item--information" type = "number" placeholder = "Posición X:">
+                                </div>
+                                <div class = "item__invert">
+                                    <label class = "item__invert--label">Posición Y</label>
+                                    <input class = "user__item--information" type = "number" placeholder = "Posición Y:">
+                                </div>
+                            </div>
+                            <div class = "user">
+                                <label class = "item__invert--label">Distancia máxima de cercanía</label>
+                                <input class = "user__item--information item__invert--extend" type = "text" placeholder = "Distancia máxima de cercanía:">
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "form__items">
+                        <p class = "form__item--title">Criterio para el cambio</p>
+                        <div class = "form__item--content">
+                            <div class = "user">
+                                <label class = "user__item--label">Criterio-----</label>
+                                <select name = "criterio" class = "user__item--information">
+                                    <option value = "1">Seleccione una opción</option>
+                                    <option value = "2">criterio 1</option>
+                                    <option value = "3">criterio 2</option>
+                                </select>
+                            </div>
+                            <div class = "user"></div>
+                        </div>
+                    </div>
+                    <div class = "form__items--buttons">
+                        <button class = "item__button item__button--reset">Resetear</button>
+                        <button class = "item__button item__button--save">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class = "footer">
+        <i class = "footer__i--facebook fa-brands fa-square-facebook"></i>
+        <p>
+            <span class = "footer__span--label">WorldCApp</span> / 2023
+        </p>
+    </footer>
+</body>
+</html>

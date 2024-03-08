@@ -1,0 +1,7 @@
+<div *ngIf = "this.content.length > 0" [ngClass] = "'grid'">
+    <div *ngFor = "let item of content">
+        <app-figurine *ngIf = "isFigurine(item)" [ngClass] = "'grid__item'" [figurine] = "item" [trashDisplay] = "trashDisplay"></app-figurine>
+        <app-pointOfSale *ngIf = "isPointOfSale(item)" [ngClass] = "'grid__item'" [pointOfSale] = "item"></app-pointOfSale>
+    </div>
+    <app-add-figurine *ngIf = "addFigurineDisplay" [ngClass] = "'grid__item figurine__container--add'"></app-add-figurine>
+</div>

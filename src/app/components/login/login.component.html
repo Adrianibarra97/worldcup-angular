@@ -1,0 +1,18 @@
+<form class = "login" [formGroup] = "user" (ngSubmit) = "onSubmit()">
+    <h1 data-testid = "title" class = "login__title--position">WorldCApp</h1>   
+    <div class = "login__user">
+        <p data-testid = "user" class = "user--label">Usuario</p>
+        <div class = "user--information">
+            <i class = "fa-solid fa-user user--icon"></i>
+            <input data-testid = "name" type = "text" class = "user--data" placeholder = "Usuario" formControlName = "name">
+        </div>
+    </div>
+    <div class = "login__user">
+        <p data-testid = "password" class = "user--label">Contraseña</p>
+        <div class = "user--information">
+            <i class = "fa-solid fa-key user--icon"></i>
+            <input data-testid = "password-input" type = "password" class = "user--data" placeholder = "Contraseña" formControlName = "password">
+        </div>
+    </div>
+    <button data-testid = "login" class = "login__button" type = "submit">Ingresar</button>
+</form>

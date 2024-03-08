@@ -1,0 +1,71 @@
+.figurine {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    border-radius: 5%;
+    background-color: white;
+}
+
+.figurine--pointOfSale {
+    border: 3px solid var(--primaryColor);
+    overflow: hidden;
+}
+
+.pointOfSale__title {
+    display: flex;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    background-color: var(--backgroundColor);
+    border-bottom: 2px solid var(--primaryColor);
+    justify-content: space-between;
+}
+
+.pointOfSale__information {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0.5rem;
+}
+
+.pointOfSale__information--general {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pointOfSale__information--general p span {
+    margin-right: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.pointOfSale__information--position1 {
+    align-items: flex-start;
+    flex-grow: 6;
+}
+
+.pointOfSale__information--position1 p {
+    margin: 1rem 0;
+}
+
+.pointOfSale__information--position2 {
+    align-items: flex-start;
+    flex-grow: 2;
+}
+
+.pointOfSale__information--position3 {
+    font-weight: bolder;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.pointOfSale__information--position3 p span {
+    font-size: 1.5rem;
+}
+
+.pointOfSale__information--border {
+    border-bottom: 1px solid black;
+}

@@ -1,0 +1,52 @@
+<aside [ngClass] = "'filter'">
+    <p data-testid = "filter-title" class = "filter__title">Ordenar</p>
+    <div class = "filter__information">
+        <div [ngClass] = "'filter__information--size'">
+            <div [ngClass] = "'filter__information--size'">
+                <div class = "information">
+                    <div class = "information__item">
+                        <input 
+                            [defaultChecked]="true"
+                            class = "information__item--radiocheck"
+                            type = "radio"
+                            name = "check"
+                            (change) = "this.byDistance($event)"
+                            data-testid = "menor-distance"
+                        >
+                        <label data-testid = "label-menor-distancia">Menor Distancia</label>
+                    </div>
+                    <div class = "information__item">
+                        <input
+                            class = "information__item--radiocheck"
+                            type = "radio"
+                            name = "check"
+                            (change) = "this.cheapFigurine($event)"
+                            data-testid = "most-cheaper"
+                        >
+                        <label data-testid = "label-mas-barato">Más Barato</label>
+                    </div>
+                    <div class = "information__item">
+                        <input
+                            class = "information__item--radiocheck"
+                            type = "radio"
+                            name = "check"
+                            (change) = "this.mostStock($event)"
+                            data-testid = "most-stock"
+                        >
+                        <label data-testid = "label-mas-sobres">Más Sobres</label>
+                    </div>
+                    <div class = "information__item">
+                        <input
+                            class = "information__item--radiocheck"
+                            type = "radio"
+                            name = "check"
+                            (change) = "this.closestPlaces($event)"
+                            data-testid = "closest-places"
+                            >
+                        <label data-testid = "label-mas-cercanos">Sólo los más cercanos</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>

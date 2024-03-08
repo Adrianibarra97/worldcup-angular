@@ -1,0 +1,48 @@
+.contenedor{
+  background-color: var(--backgroundColor);
+  font-family: var(--fontFamily);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 10px;
+}
+
+.contenedor-textos{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.button{
+  background-color: var(--primaryColor);
+  padding:10px 5px;
+  font-size: 1em;
+  color: white;
+  border: solid 1px;
+  border-radius: 3px;
+}
+
+@media (min-width:400px){
+  .contenedor-textos{
+    font-size: 1.5em;
+  }
+  .button{
+    font-size: 1.5em;
+    padding: 10px;
+  }
+}
+
+@media (min-width:768px){
+  .contenedor-textos{
+    font-size: 1.7em;
+    max-width: 80%;
+  }
+  .button{
+    font-size: 1.7em;
+    padding: 14px;
+  }
+}

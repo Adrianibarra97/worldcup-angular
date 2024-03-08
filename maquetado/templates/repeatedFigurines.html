@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>WorldCupApp</title>
+    <link rel = "stylesheet" href = "../css/templates-styles/main.css">
+    <link rel = "stylesheet" href = "../css/components-styles/header.css">
+    <link rel = "stylesheet" href = "../css/components-styles/userBanner.css">
+    <link rel = "stylesheet" href = "../css/components-styles/userInfoNav.css">
+    <link rel = "stylesheet" href = "../css/components-styles/figurine.css">
+    <link rel = "stylesheet" href = "../css/components-styles/footer.css">
+    <link rel = "preconnect" href = "https://fonts.googleapis.com">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
+    <script src = "https://kit.fontawesome.com/3251cdb940.js" crossorigin = "anonymous"></script>
+    <script src = "../scripts-js/menu-action.js" crossorigin = "anonymous"></script>
+</head>
+<body class = "scroll--style">
+    <header class = "header">
+        <div id = "menu" class = "menu">
+            <div class = "menu__items">
+                <div class = "menu__item--title">
+                    <p class = "menu__item--position">WorldCApp</p>
+                </div>
+                <button class = "fa-solid fa-bars menu__item--button" onclick = "menuAction()"></button>
+            </div>
+            <nav class = "nav">
+                <ul class = "nav__items">  
+                    <li class = "nav__item"><a href = "../templates/searchFigurines.html">Figuritas</a></li>  
+                    <li class = "nav__item"><a href = "../templates/searchEnvelopes.html">Sobres</a> </li>
+                    <li class = "nav__item"><a href = "../templates/profileInformation.html">Perfil</a></li>
+                    <li class = "nav__item"><button class = "fa-solid fa-right-from-bracket nav__item nav__button--logout"></button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class = "main">
+        <div class = "body--distribution">
+            <aside class = "banner">
+                <div class = "banner__items">
+                    <figure class = "banner__item banner__item--image">
+                        <img class = "banner__item--profile" src = "../images/carlitos.jpg" alt = "user">
+                    </figure>
+                    <p class = "banner__item banner__item--title"><span class = "banner__item--font">carlitos 123 <i class = "fa-solid fa-pencil"></i></span></p>
+                    <p class = "banner__item"><span class = "banner__item--font">Edad:</span> 84 años</p>
+                    <p class = "banner__item"><span class = "banner__item--font">Ubicación:</span> CABA</p>
+                </div>
+            </aside>
+            <div class = "section--distribution">
+                <nav class = "user__nav">
+                    <ul class = "nav__user--items">  
+                        <li class = "nav__user--item"><a href = "../templates/profileInformation.html">Información del perfil</a></li>  
+                        <li class = "nav__user--item nav__user--border"><a href = "../templates/repeatedFigurines.html">Figuritas Repetidas</a></li>
+                        <li class = "nav__user--item"><a href = "../templates/missingFigurines.html">Figuritas Faltantes</a></li>
+                    </ul>
+                </nav>
+                <div class = "grid">
+                    <div class = "grid__item">
+                        <div class = "figurine">
+                            <div class = "figurine__trash">
+                                <i class = "fa-regular fa-trash-can"></i>
+                            </div>
+                            <figure class = "figurine__image">
+                                <img class = "figurine__image--size" src = "../images/messi.jpg" alt = "messi-festejando">
+                            </figure>
+                            <div class = "information__player">
+                                <div class = "information__player--header">
+                                    <p class = "player__name">Lionel Messi</p>
+                                    <i class = "fa-solid fa-clipboard-user"> 5</i>
+                                    <div class = "player__status">
+                                        <i class = "player__status--color fa-solid fa-fire-flame-curved"></i>
+                                        <i class = "fa-solid fa-star"> 124</i>
+                                    </div>
+                                </div>
+                                <div class = "information__player--general">
+                                    <p class = "player--border">
+                                        <i class = "fa-solid fa-weight-scale"></i><span>Peso</span>72 kilos
+                                    </p>
+                                    <p class = "player--border">
+                                        <i class = "fa-solid fa-person-arrow-up-from-line"></i><span>Altura</span>1.7 metros
+                                    </p>
+                                    <p><span>Casaca</span>10</p>
+                                    <p><span>Nacimiento</span>24/06/1987 (36años)</p>   
+                                    <p><span>Selección</span>Argentina</p>
+                                    <p><span>Posición</span>Delantero</p>
+                                </div>
+                                <div class = "information__player--position information__player--price">
+                                    <p>Cotización USD 80.000.000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class = "grid__item">
+                        <div class = "figurine">
+                            <div class = "figurine__trash">
+                                <i class = "fa-regular fa-trash-can"></i>
+                            </div>
+                            <figure class = "figurine__image">
+                                <img class = "figurine__image--size" src = "../images/messi.jpg" alt = "messi-festejando">
+                            </figure>
+                            <div class = "information__player">
+                                <div class = "information__player--header">
+                                    <p class = "player__name">Lionel Messi</p>
+                                    <i class = "fa-solid fa-clipboard-user"> 5</i>
+                                    <div class = "player__status">
+                                        <i class="fa-solid fa-trophy"></i>
+                                        <i class = "fa-solid fa-star"> 124</i>
+                                    </div>
+                                </div>
+                                <div class = "information__player--general">
+                                    <p class = "player--border">
+                                        <i class = "fa-solid fa-weight-scale"></i><span>Peso</span>72 kilos
+                                    </p>
+                                    <p class = "player--border">
+                                        <i class = "fa-solid fa-person-arrow-up-from-line"></i><span>Altura</span>1.7 metros
+                                    </p>
+                                    <p><span>Casaca</span>10</p>
+                                    <p><span>Nacimiento</span>24/06/1987 (36años)</p>   
+                                    <p><span>Selección</span>Argentina</p>
+                                    <p><span>Posición</span>Delantero</p>
+                                </div>
+                                <div class = "information__player--position information__player--price">
+                                    <p>Cotización USD 80.000.000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class = "grid__item">
+                        <div class = "figurine">
+                            <div class = "figurine__trash">
+                                <i class = "fa-regular fa-trash-can"></i>
+                            </div>
+                            <figure class = "figurine__image">
+                                <img class = "figurine__image--size" src = "../images/messi.jpg" alt = "messi-festejando">
+                            </figure>
+                            <div class = "information__player">
+                                <div class = "information__player--header">
+                                    <p class = "player__name">Lionel Messi</p>
+                                    <i class = "fa-solid fa-clipboard-user"> 5</i>
+                                    <div class = "player__status">
+                                        <i class = "fa-solid fa-star"> 124</i>
+                                    </div>
+                                </div>
+                                <div class = "information__player--general">
+                                    <p class = "player--border">
+                                        <i class = "fa-solid fa-weight-scale"></i><span>Peso</span>72 kilos
+                                    </p>
+                                    <p class = "player--border">
+                                        <i class = "fa-solid fa-person-arrow-up-from-line"></i><span>Altura</span>1.7 metros
+                                    </p>
+                                    <p><span>Casaca</span>10</p>
+                                    <p><span>Nacimiento</span>24/06/1987 (36años)</p>   
+                                    <p><span>Selección</span>Argentina</p>
+                                    <p><span>Posición</span>Delantero</p>
+                                </div>
+                                <div class = "information__player--position information__player--price">
+                                    <p>Cotización USD 80.000.000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class = "grid__item">
+                        <div class = "figurine">
+                            <div class = "figurine__trash">
+                                <i class = "fa-regular fa-trash-can"></i>
+                            </div>
+                            <figure class = "figurine__image">
+                                <img class = "figurine__image--size" src = "../images/messi.jpg" alt = "messi-festejando">
+                            </figure>
+                            <div class = "information__player">
+                                <div class = "information__player--header">
+                                    <p class = "player__name">Lionel Messi</p>
+                                    <i class = "fa-solid fa-clipboard-user"> 5</i>
+                                    <div class = "player__status">
+                                        <i class = "player__status--color fa-solid fa-fire-flame-curved"></i>
+                                        <i class = "fa-solid fa-star"> 124</i>
+                                    </div>
+                                </div>
+                                <div class = "information__player--general">
+                                    <p class = "player--border">
+                                        <i class = "fa-solid fa-weight-scale"></i><span>Peso</span>72 kilos
+                                    </p>
+                                    <p class = "player--border">
+                                        <i class = "fa-solid fa-person-arrow-up-from-line"></i><span>Altura</span>1.7 metros
+                                    </p>
+                                    <p><span>Casaca</span>10</p>
+                                    <p><span>Nacimiento</span>24/06/1987 (36años)</p>   
+                                    <p><span>Selección</span>Argentina</p>
+                                    <p><span>Posición</span>Delantero</p>
+                                </div>
+                                <div class = "information__player--position information__player--price">
+                                    <p>Cotización USD 80.000.000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class = "grid__item">
+                        <div class = "figurine">
+                            <div class = "figurine__trash">
+                                <i class = "fa-regular fa-trash-can"></i>
+                            </div>
+                            <figure class = "figurine__image">
+                                <img class = "figurine__image--size" src = "../images/messi.jpg" alt = "messi-festejando">
+                            </figure>
+                            <div class = "information__player">
+                                <div class = "information__player--header">
+                                    <p class = "player__name">Lionel Messi</p>
+                                    <i class = "fa-solid fa-clipboard-user"> 5</i>
+                                    <div class = "player__status">
+                                        <i class="fa-solid fa-trophy"></i>
+                                        <i class = "fa-solid fa-star"> 124</i>
+                                    </div>
+                                </div>
+                                <div class = "information__player--general">
+                                    <p class = "player--border">
+                                        <i class = "fa-solid fa-weight-scale"></i><span>Peso</span>72 kilos
+                                    </p>
+                                    <p class = "player--border">
+                                        <i class = "fa-solid fa-person-arrow-up-from-line"></i><span>Altura</span>1.7 metros
+                                    </p>
+                                    <p><span>Casaca</span>10</p>
+                                    <p><span>Nacimiento</span>24/06/1987 (36años)</p>   
+                                    <p><span>Selección</span>Argentina</p>
+                                    <p><span>Posición</span>Delantero</p>
+                                </div>
+                                <div class = "information__player--position information__player--price">
+                                    <p>Cotización USD 80.000.000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class = "grid__item">
+                        <div class = "figurine">
+                            <div class = "figurine__trash">
+                                <i class = "fa-regular fa-trash-can"></i>
+                            </div>
+                            <figure class = "figurine__image">
+                                <img class = "figurine__image--size" src = "../images/messi.jpg" alt = "messi-festejando">
+                            </figure>
+                            <div class = "information__player">
+                                <div class = "information__player--header">
+                                    <p class = "player__name">Lionel Messi</p>
+                                    <i class = "fa-solid fa-clipboard-user"> 5</i>
+                                    <div class = "player__status">
+                                        <i class = "fa-solid fa-star"> 124</i>
+                                    </div>
+                                </div>
+                                <div class = "information__player--general">
+                                    <p class = "player--border">
+                                        <i class = "fa-solid fa-weight-scale"></i><span>Peso</span>72 kilos
+                                    </p>
+                                    <p class = "player--border">
+                                        <i class = "fa-solid fa-person-arrow-up-from-line"></i><span>Altura</span>1.7 metros
+                                    </p>
+                                    <p><span>Casaca</span>10</p>
+                                    <p><span>Nacimiento</span>24/06/1987 (36años)</p>   
+                                    <p><span>Selección</span>Argentina</p>
+                                    <p><span>Posición</span>Delantero</p>
+                                </div>
+                                <div class = "information__player--position information__player--price">
+                                    <p>Cotización USD 80.000.000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "grid__item figurine__container--add">
+                        <p class = "figurine__button--add">+</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class = "footer">
+        <i class = "footer__i--facebook fa-brands fa-square-facebook"></i>
+        <p>
+            <span class = "footer__span--label">WorldCApp</span> / 2023
+        </p>
+    </footer>
+</body>
+</html>

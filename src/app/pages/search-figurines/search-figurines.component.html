@@ -1,0 +1,8 @@
+<app-browser (searchByTitle) = "this.searchByTitle($event)"></app-browser>
+<div class="body--distribution">
+    <app-filter [ngClass]="'aside'" (filterFigurines)="this.filterFigurines($event)"></app-filter>
+    <app-grid 
+        [ngClass]="'grid'"
+        [content] = "this.figurines"
+    ></app-grid>
+</div>

@@ -1,0 +1,21 @@
+.footer {
+	display: flex;
+	position: relative;
+	height: 6%;
+	width: 100%;
+	padding: 1.1rem;
+	font-size: 1.25rem;
+	font-family: var(--fontFamily);
+	background-color: var(--footerColor);
+	color: var(--backgroundColor);
+	justify-content: center;
+	align-items: center;
+}
+
+.footer__i--facebook {
+	margin-right: 1.1rem;
+}
+
+.footer__span--label {
+    font-weight: bolder;
+}

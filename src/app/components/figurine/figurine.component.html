@@ -1,0 +1,44 @@
+<div class = "figurine">
+    <div *ngIf = "trashDisplay" class = "figurine__trash">
+        <button
+            class = "fa-regular fa-trash-can button__trash"
+            (click) = "handlerDelete()"
+        ></button>
+    </div>
+    <figure class = "figurine__image">
+        <img class = "figurine__image--size" [src] = "figurine.url" alt = "messi-festejando">
+    </figure>
+    <div [attr.data-testid]= "'figurine-information_' + figurine.id"  class = "information__player" [routerLink] = '"/detail-figurine/" + figurine.id'>
+        <div class = "information__player--header">
+            <p class = "player__name">{{ figurine.player.name }} {{figurine.player.surname}}</p>
+            <i class = "fa-solid fa-clipboard-user"> {{ figurine.numberFigurine }}</i>
+            <div class = "player__status">
+                <span *ngIf="figurine.onFire">
+                    <i class = "player__status--color fa-solid fa-fire-flame-curved"></i>
+                </span>
+                <span *ngIf="figurine.player.isPromise">
+                    <i class = "fa-solid fa-star"></i>
+                </span>
+                <span> {{ figurine.valoracionBase() + figurine.player.valoracion }}</span>
+            </div>
+        </div>
+        <div class = "information__player--general">
+            <p class = "player--border">
+                <i class = "fa-solid fa-weight-scale"></i><span>Peso</span>{{ figurine.player.weight }} kilos
+            </p>
+            <p class = "player--border">
+                <i class = "fa-solid fa-person-arrow-up-from-line"></i><span>Altura</span>{{ figurine.player.height }} metros
+            </p>
+            <p><span>Casaca</span>{{ figurine.player.numberTShirt}}</p>
+            <p><span>Nacimiento</span>{{ figurine.player.birthOfDate.getDate() }}/{{ figurine.player.birthOfDate.getMonth() }}/{{ figurine.player.birthOfDate.getFullYear() }} ({{figurine.edad()}} años)</p>   
+            <p><span>Selección</span>{{ figurine.player.nationalTeam.country }}</p>
+            <p><span>Posición</span>{{figurine.player.position}}</p>
+        </div>
+        <div class = "information__player--position information__player--price">
+            <p>Cotización USD {{ figurine.player.price }}</p>
+        </div>
+        <div class = "information__player--position information__player--giveby">
+            <p *ngIf = "!trashDisplay">Cedida Por {{ figurine.giveBy?.nombre }} {{ figurine.giveBy?.apellido }}</p>
+        </div>
+    </div>
+</div>

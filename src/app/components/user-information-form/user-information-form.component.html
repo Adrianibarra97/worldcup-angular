@@ -1,0 +1,186 @@
+<form class = "form"  [formGroup] = "newUser" (ngSubmit) = "onSubmit($event)">
+    <div class = "form__items">
+        <p
+            class = "form__item--title"
+            data-testid = "title"
+        >Información general</p>
+        <div class = "form__item--content">
+            <div class = "user">
+                <label class = "user__item--label">Nombre</label>
+                <input
+                    class = "user__item--information"
+                    type = "text"
+                    placeholder = "Nombre:"
+                    [defaultValue] = "user.name"
+                    formControlName = "name"
+                    data-testid = "name"
+                >
+                <label class = "user__item--label">Apellido</label>
+                <input
+                    class = "user__item--information"
+                    type = "text"
+                    placeholder = "Apellido:"
+                    [defaultValue] = "user.surname"
+                    formControlName = "surname"
+                    data-testid = "surname"
+                >
+            </div>
+            <div class = "user">
+                <label class = "user__item--label">Correo electrónico</label>
+                <input
+                    class = "user__item--information"
+                    type = "email"
+                    placeholder = "Correo electrónico:"
+                    [defaultValue] = "user.emailAddress"
+                    formControlName = "emailAddress"
+                    data-testid = "emailAddress"
+                    >
+                <label class = "user__item--label">Fecha de nacimiento</label>
+                <input
+                    class = "user__item--information"
+                    type = "date"
+                    placeholder = "Fecha de nacimiento:"
+                    data-testid = "birthOfDate"
+                    [valueAsDate] = "user.birthOfDate"
+                    formControlName = "birthOfDate"
+                >
+            </div>
+        </div>
+    </div>
+    <div class = "form__items">
+        <p 
+            class = "form__item--title"
+            data-testid = "address"
+        >Dirección</p>
+        <div class = "form__item--content">
+            <div class = "user">
+                <label class = "user__item--label">Provincia</label>
+                <select 
+                    name = "provincia"
+                    class = "user__item--information"
+                    formControlName = "province"
+                    data-testid = "province"
+                >
+                    <option value = "1">Seleccione una opción</option>
+                    <option value = "2" [defaultSelected]="user.address.province">{{ user.address.province }}</option>
+                    <option value = "3">San Luís</option>
+                    <option value = "4">Cordoba</option>
+                    <option value = "5">Entre Ríos</option>
+                </select>
+                <label class = "user__item--label">Calle</label>
+                <input
+                    class = "user__item--information"
+                    type = "text"
+                    placeholder = "Calle:"
+                    [defaultValue] = "user.address.street"
+                    formControlName = "street"
+                    data-testid = "street"
+                >
+            </div>
+            <div class = "user">
+                <label class = "user__item--label">Localidad</label>
+                <select
+                    name = "loccalidad"
+                    class = "user__item--information"
+                    formControlName = "location"
+                    data-testid = "location"
+                >
+                    <option value = "1">Seleccione una opción</option>
+                    <option value = "2" [defaultSelected]="user.address.location">{{ user.address.location }}</option>
+                    <option value = "3">San Martín</option>
+                    <option value = "4">San Andrés</option>
+                    <option value = "5">Villa Ballester</option>
+                    <option value = "6">Moreno</option>
+                </select>
+                <label class = "user__item--label">Altura</label>
+                <input
+                    class = "user__item--information"
+                    type = "number"
+                    placeholder = "Altura:"
+                    [defaultValue] = "user.address.streetHeight"
+                    formControlName = "streetHeight"
+                    data-testid = "streetHeight"
+                >
+            </div>
+        </div>
+    </div>
+    <div class = "form__items">
+        <p 
+            class = "form__item--title"
+            data-testid = "geographicLocation"
+        >Ubicación geográfica</p>
+        <div class = "form__item--content form__item--invert">
+            <div class = "user user__item--invert">
+                <div class = "item__invert">
+                    <label class = "item__invert--label">Posición X</label>
+                    <input
+                        class = "user__item--information"
+                        type = "number"
+                        placeholder = "Posición X:"
+                        [defaultValue] = "user.address.geographicLocationX"
+                        formControlName = "geographicLocationX"
+                        data-testid = "geographicLocationX"
+                    >
+                </div>
+                <div class = "item__invert">
+                    <label class = "item__invert--label">Posición Y</label>
+                    <input
+                        class = "user__item--information"
+                        type = "number"
+                        placeholder = "Posición Y:"
+                        [defaultValue] = "user.address.geographicLocationY"
+                        formControlName = "geographicLocationY"
+                        data-testid = "geographicLocationY"
+                    >
+                </div>
+            </div>
+            <div class = "user">
+                <label class = "item__invert--label">Distancia máxima de cercanía</label>
+                <input
+                    class = "user__item--information item__invert--extend"
+                    type = "text"
+                    placeholder = "Distancia máxima de cercanía:"
+                    [defaultValue] = "user.maxDistanceBetweenOtherUser"
+                    formControlName = "maxDistanceBetweenOtherUser"
+                    data-testid = "maxDistanceBetweenOtherUser"
+                >
+            </div>
+        </div>
+    </div>
+    <div class = "form__items">
+        <p 
+            class = "form__item--title"
+            data-testid = "criterion"
+        >Criterio para el cambio</p>
+        <div class = "form__item--content">
+            <div class = "user">
+                <label class = "user__item--label">Criterio-----</label>
+                <select
+                    class = "user__item--information"
+                    name = "criterio"
+                    formControlName = "criterio"
+                    data-testid = "criterio"
+                >
+                    <option value = "1">Seleccione una opción</option>
+                    <option value = "2">criterio 1</option>
+                    <option value = "3">criterio 2</option>
+                </select>
+            </div>
+            <div class = "user"></div>
+        </div>
+    </div>
+    <div class = "form__items--buttons" name = "buttons">
+        <button
+            class = "item__button item__button--reset"
+            name = "reset"
+            type = "submit"
+            data-testid = "reset"
+        >Resetear</button>
+        <button
+            class = "item__button item__button--save"
+            name = "save"
+            type = "submit"
+            data-testid = "save"
+        >Guardar</button>
+    </div>
+</form>

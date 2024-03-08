@@ -1,0 +1,77 @@
+:root {
+	--footerColor: #1c2b2d;
+	--backgroundColor: #e6d5b8;
+	--primaryColor: #1f6f8b;
+	--secondaryColor: #99a8b2;
+	--backgroundLoginColor: white;
+	--userProfileColor: beige;
+	--fontFamily: 'Times New Roman';
+}
+
+body{
+	height: 100vh;
+}
+*,body {
+	padding: 0;
+	margin:0;
+	box-sizing: border-box;
+}
+
+.scroll--style {
+	background-color: var(--backgroundColor);
+}
+
+.scroll--style::-webkit-scrollbar {
+	width: 0.5rem;
+}
+  
+.scroll--style::-webkit-scrollbar-thumb {
+	background-color: var(--footerColor);
+	border-radius: 5rem;
+}
+
+.main {
+	display: block;
+	min-height: 86%;
+	width: 100%;
+	overflow: hidden;
+	background-color: var(--backgroundColor);
+}
+
+.aside {
+	width: 100%;
+	background-color: var(--backgroundColor);
+}
+
+.grid {
+	width: 100%;
+}
+
+.body--distribution {
+	display: flex;
+	flex-direction: column;
+}
+
+.section--distribution {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+@media (min-width: 769px) {
+	.body--distribution {
+		flex-direction: row;
+	}
+
+	.section--distribution {
+		width: 80%;
+	}
+
+	.aside {
+		width: 20%;
+	}
+
+	.grid {
+		width: 80%;
+	}
+}

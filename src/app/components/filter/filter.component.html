@@ -1,0 +1,44 @@
+<aside [ngClass] = "'filter'">
+    <p class = "filter__title">Filtros</p>
+    <div class = "filter__information">
+        <div [ngClass] = "'filter__information--size'">
+            <div [ngClass] = "'filter__information--size'">
+                <p class = "filter__information--title">Valoración</p>
+                <div class = "filter__information--inputs">
+                    <div class = "information__input">
+                        <label>Desde</label>
+                        <input
+                            class = "information__input--value"
+                            type = "number"
+                            min = "0"
+                            placeholder = "Desde"
+                            data-testid="filter-desde"
+                            (change) = "this.minChange($event)"
+                        >
+                    </div>
+                    <div class = "information__input">
+                        <label>Hasta</label>
+                        <input 
+                            class = "information__input--value"
+                            type = "number"
+                            min = "0"
+                            placeholder = "Hasta"
+                            data-testid="filter-hasta"
+                            (change) = "this.maxChange($event)"
+                        >
+                    </div>
+                </div>
+                <div class = "filter__information--checkboxs">
+                    <div class = "information__checkbox">
+                        <input data-testid="filter-first-checkbox" type = "checkbox" name = "on-fire" (change) = "this.onFireChange($event)">
+                        <label>On fire</label>
+                    </div>
+                    <div class = "information__checkbox">
+                        <input data-testid="filter-second-checkbox" type = "checkbox" name = "es-promesa" (change) = "this.isPromiseChange($event)">
+                        <label>Es promesa</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>

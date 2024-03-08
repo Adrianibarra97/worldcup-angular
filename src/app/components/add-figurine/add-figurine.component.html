@@ -1,0 +1,22 @@
+<button
+    id = "add-button"
+    class = "figurine__button--add"
+    (click) = "handleClick()"
+>+
+    <select
+        [(ngModel)] = "SelectedValue"
+        class = "add-select"
+        *ngIf = "selectIsActive"
+        (change) = "handlerChangeSelect()"
+    >
+        <option 
+            class = "add-option"
+            [value] = "0"
+        >Seleccione una opción</option>
+        <option
+            class = "add-option"
+            *ngFor = "let figurine of figurines"
+            [value] = "figurine.id"
+        >{{ figurine.player.name }}</option>
+    </select>
+</button>

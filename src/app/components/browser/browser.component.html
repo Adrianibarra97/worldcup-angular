@@ -1,0 +1,7 @@
+<div class="searchbar">
+    <div class="searchbar__items">
+        <input (keyup.enter)="this.search()" data-testid="browser-input" [(ngModel)] = "valueOfInput" class = "searchbar__item searchbar__item--padding" placeholder="Buscar">
+        <button (click)="this.search()" type="submit"
+            class="fa-solid fa-magnifying-glass searchbar__item searchbar__item--button"></button>
+    </div>
+</div>
